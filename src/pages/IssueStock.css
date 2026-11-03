@@ -1,0 +1,315 @@
+.issue-stock-page {
+  color: #263238;
+}
+
+.issue-stock-heading,
+.issue-history-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.issue-stock-heading {
+  margin-bottom: 24px;
+}
+
+.issue-stock-heading h1 {
+  margin: 0 0 7px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.issue-stock-heading p,
+.issue-card-description {
+  margin: 0;
+  color: #7b8794;
+  font-size: 13px;
+}
+
+.issue-print-btn,
+.issue-clear-btn,
+.issue-submit-btn {
+  padding: 11px 17px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.issue-print-btn,
+.issue-clear-btn {
+  background: white;
+  border: 1px solid #dfe5e9;
+  color: #52606d;
+}
+
+.issue-submit-btn {
+  background: #199f61;
+  color: white;
+  border: none;
+}
+
+.issue-submit-btn:hover {
+  background: #12834e;
+}
+
+.issue-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.issue-stock-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.issue-stock-summary > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  background: white;
+  border: 1px solid #e8ecef;
+  border-radius: 12px;
+}
+
+.issue-stock-summary span {
+  color: #7b8794;
+  font-size: 12px;
+}
+
+.issue-stock-summary strong {
+  font-size: 26px;
+}
+
+.issue-stock-card {
+  margin-bottom: 24px;
+  padding: 24px;
+  background: white;
+  border: 1px solid #e8ecef;
+  border-radius: 12px;
+}
+
+.issue-stock-card h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.issue-card-description {
+  margin-bottom: 22px;
+}
+
+.issue-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.issue-form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.issue-form-grid input,
+.issue-form-grid select,
+.issue-form-grid textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #dfe5e9;
+  border-radius: 8px;
+  background: white;
+  color: #263238;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+}
+
+.issue-form-grid input:focus,
+.issue-form-grid select:focus,
+.issue-form-grid textarea:focus {
+  border-color: #199f61;
+  box-shadow: 0 0 0 3px #199f6118;
+}
+
+.issue-form-grid textarea {
+  resize: vertical;
+}
+
+.issue-full-width {
+  grid-column: 1 / -1;
+}
+
+.issue-message {
+  margin-top: 20px;
+  padding: 13px 15px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.issue-message.success {
+  color: #12834e;
+  background: #eaf8f1;
+  border: 1px solid #ccebd9;
+}
+
+.issue-message.error {
+  color: #b42318;
+  background: #fff0f0;
+  border: 1px solid #ffd5d5;
+}
+
+.issue-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.issue-history-heading {
+  margin-bottom: 20px;
+}
+
+.issue-history-heading .issue-card-description {
+  margin-bottom: 0;
+}
+
+.issue-table-wrapper {
+  overflow-x: auto;
+}
+
+.issue-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+
+.issue-table th {
+  padding: 14px;
+  background: #f7f9fb;
+  color: #687580;
+  white-space: nowrap;
+}
+
+.issue-table td {
+  padding: 14px;
+  border-top: 1px solid #edf0f2;
+  white-space: nowrap;
+}
+
+.issue-empty {
+  text-align: center;
+  color: #7b8794;
+  padding: 28px !important;
+}
+
+@media (max-width: 700px) {
+  .issue-stock-heading,
+  .issue-history-heading {
+    align-items: flex-start;
+  }
+
+  .issue-stock-heading h1 {
+    font-size: 25px;
+  }
+
+  .issue-stock-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .issue-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .issue-full-width {
+    grid-column: auto;
+  }
+
+  .issue-stock-card {
+    padding: 16px;
+  }
+}
+
+@media print {
+  .top-header,
+  .sidebar,
+  .footer,
+  .issue-stock-heading,
+  .issue-stock-summary,
+  .issue-stock-card form,
+  .issue-print-btn {
+    display: none !important;
+  }
+
+  .main-content {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .issue-stock-card {
+    padding: 0;
+    border: none;
+  }
+
+  .issue-table {
+    font-size: 10px;
+  }
+}
+.issue-add-item-box,
+.dispatch-items-box {
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px solid #e2e8e5;
+  border-radius: 12px;
+  background: #f9fcfa;
+}
+
+.issue-add-item-box h3,
+.dispatch-items-box h3 {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.issue-add-item-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 0.7fr auto;
+  gap: 16px;
+  align-items: end;
+}
+
+.issue-add-btn {
+  height: 44px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 8px;
+  background: #199f61;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.issue-add-btn:hover {
+  background: #12834e;
+}
+
+.issue-delete-btn {
+  border: none;
+  background: #ffe8e8;
+  color: #d93025;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .issue-add-item-grid {
+    grid-template-columns: 1fr;
+  }
+}

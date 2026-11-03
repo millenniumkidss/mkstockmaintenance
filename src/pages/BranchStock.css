@@ -1,0 +1,328 @@
+.branch-stock-page {
+  color: #263238;
+}
+
+.branch-stock-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.branch-stock-heading h1 {
+  margin: 0 0 7px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.branch-stock-heading p,
+.branch-stock-table-heading p {
+  margin: 0;
+  color: #7b8794;
+  font-size: 13px;
+}
+
+.branch-print-btn,
+.branch-refresh-btn {
+  padding: 11px 16px;
+  background: white;
+  border: 1px solid #dfe5e9;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.branch-stock-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.branch-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 21px;
+  background: white;
+  border: 1px solid #e8ecef;
+  border-radius: 12px;
+}
+
+.branch-summary-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  background: #eaf8f1;
+  border-radius: 11px;
+  font-size: 23px;
+}
+
+.branch-summary-card span {
+  display: block;
+  margin-bottom: 6px;
+  color: #7b8794;
+  font-size: 12px;
+}
+
+.branch-summary-card strong {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.branch-stock-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 26px;
+}
+
+.branch-overview-card {
+  padding: 20px;
+  text-align: left;
+  background: white;
+  border: 1px solid #e8ecef;
+  border-radius: 12px;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.branch-overview-card:hover,
+.branch-overview-card.selected {
+  border-color: #199f61;
+  box-shadow: 0 4px 16px #199f6112;
+}
+
+.branch-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.branch-card-number {
+  color: #a1acb5;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.branch-card-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background: #eaf8f1;
+  border-radius: 10px;
+  font-size: 21px;
+}
+
+.branch-overview-card h3 {
+  margin: 17px 0 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.branch-card-quantity {
+  font-size: 30px;
+  font-weight: 700;
+  color: #199f61;
+}
+
+.branch-overview-card > p {
+  margin: 3px 0 18px;
+  color: #7b8794;
+  font-size: 12px;
+}
+
+.branch-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid #edf0f2;
+  color: #7b8794;
+  font-size: 11px;
+}
+
+.branch-card-footer span {
+  color: #199f61;
+  font-weight: 600;
+}
+
+.branch-stock-table-card {
+  background: white;
+  border: 1px solid #e8ecef;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.branch-stock-table-heading {
+  padding: 22px;
+}
+
+.branch-stock-table-heading h2 {
+  margin: 0 0 7px;
+  font-size: 18px;
+}
+
+.branch-stock-filters {
+  display: flex;
+  gap: 12px;
+  padding: 0 22px 20px;
+}
+
+.branch-stock-filters select,
+.branch-stock-filters input {
+  box-sizing: border-box;
+  min-width: 0;
+  padding: 11px 12px;
+  background: white;
+  border: 1px solid #dfe5e9;
+  border-radius: 8px;
+  color: #263238;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+}
+
+.branch-stock-filters select {
+  flex: 0 1 220px;
+}
+
+.branch-stock-filters input {
+  flex: 1;
+}
+
+.branch-stock-filters select:focus,
+.branch-stock-filters input:focus {
+  border-color: #199f61;
+}
+
+.branch-stock-table-wrapper {
+  overflow-x: auto;
+}
+
+.branch-stock-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+
+.branch-stock-table th {
+  padding: 15px 18px;
+  background: #f7f9fb;
+  color: #687580;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.branch-stock-table td {
+  padding: 15px 18px;
+  border-top: 1px solid #edf0f2;
+  white-space: nowrap;
+}
+
+.branch-name-badge {
+  display: inline-block;
+  padding: 6px 9px;
+  color: #12834e;
+  background: #eaf8f1;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.branch-item-name {
+  font-weight: 600;
+}
+
+.branch-quantity {
+  font-weight: 700;
+}
+
+.branch-stock-empty {
+  padding: 32px !important;
+  text-align: center;
+  color: #7b8794;
+  white-space: normal !important;
+}
+
+.branch-stock-table-footer {
+  padding: 15px 22px;
+  border-top: 1px solid #edf0f2;
+  color: #7b8794;
+  font-size: 12px;
+}
+
+@media (max-width: 1000px) {
+  .branch-stock-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .branch-stock-summary {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .branch-stock-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .branch-stock-heading h1 {
+    font-size: 25px;
+  }
+
+  .branch-stock-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .branch-stock-filters {
+    flex-direction: column;
+    padding: 0 16px 18px;
+  }
+
+  .branch-stock-filters select {
+    flex-basis: auto;
+  }
+
+  .branch-stock-table-heading {
+    padding: 18px 16px;
+  }
+}
+
+@media print {
+  .top-header,
+  .sidebar,
+  .footer,
+  .branch-stock-heading,
+  .branch-stock-summary,
+  .branch-stock-cards,
+  .branch-stock-filters {
+    display: none !important;
+  }
+
+  .main-content {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .branch-stock-table-card {
+    border: none;
+  }
+
+  .branch-stock-table {
+    font-size: 10px;
+  }
+}
